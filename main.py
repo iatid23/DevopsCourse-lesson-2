@@ -103,13 +103,14 @@ def first():
     chk = True
     while chk:
         x = input('please enter first number\n')
+
         chk = check_num(x)
     chk = True
     while chk:
         y = input('please enter second number\n')
         chk = check_num(y)
 
-    if x > y:
+    if int(x) > int(y):
         print('BIG')
         print('###################################')
     elif x == y :
@@ -220,11 +221,22 @@ def eight():
 
 def nine():
     print('9)')
-    num1, num2 = input('Please enter two numbers to be summed:')
-    sum_num = sum(num1, num2)
-    print(f'here is the sum of the number you chose : {sum_num}')
+    print(('Please enter two numbers to be summed'))
 
-    str1, str2 = input('Please enter two strings to be manipulate:')
+    chk = True
+    while chk:
+        x = input('please enter first number\n')
+        chk = check_num(x)
+    chk = True
+    while chk:
+        y = input('please enter second number\n')
+        chk = check_num(y)
+    sum_num = sum(int(x), int(y))
+    print(f'here is the sum of the number you chose : {sum_num}')
+    print(('***************************************** '))
+    print(('Please enter two strings to be manipulate'))
+    str1 = input('please enter first string\n')
+    str2 = input('please enter second string \n')
     str_man = str(str1, str2)
     print(f'here new string -  {str_man}')
     print('###################################')
